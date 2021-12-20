@@ -13,10 +13,29 @@
         <a href="/metrics">prometheus metrics</a>
     </p>
     <p>
-        <a href="/WeatherForecast">WeatherForecast</a>
+        <a href="/addmetrics">addmetrics</a>
     </p>
     <p>
         <a href="/swagger">Swagger</a>
     </p>
+
+    <div>
+
+        <label for="inputName">Name</label><br>
+        <input type="text" id="inputName"><br>
+
+        <label for="inputValue">Value</label><br>
+        <input type="number" id="inputValue"><br>
+        <br>
+        <button id="btnAdd">Add Value</button>
+
+    </div>
+
+    <div id="messages">
+
+    </div>
+    <script type="module">
+        import "./index.js"
+    </script>
 </body>
 </html>
