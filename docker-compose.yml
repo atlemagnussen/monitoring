@@ -1,0 +1,18 @@
+version: '2'
+volumes:
+  local_volume:
+    external: false
+services:
+  prometheus:
+    image: prom/prometheus:v2.20.1
+    container_name: prometheus
+    volumes:
+      - local_volume:/prometheus
+      - /opt/prom/prometheus.yml:/opt/prom/prometheus.yml
+    ports:
+      - 9090:9090
+    command:
+      - '--config.file=/opt/prom/prometheus.yml'
+    logging:
+      driver: "json-file"
+    user: 9090:9090
