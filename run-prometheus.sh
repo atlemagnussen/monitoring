@@ -1,5 +1,6 @@
 
 #!/usr/bin/env bash
+docker container rm prometheus-atle
 
 docker run --user $(id -u):$(id -g) -d \
     --name prometheus-atle \
