@@ -1,5 +1,7 @@
 
 #!/usr/bin/env bash
+docker stop prometheus-atle
+
 docker container rm prometheus-atle
 
 docker run --user $(id -u):$(id -g) -d \
