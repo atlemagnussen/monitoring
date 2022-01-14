@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-docker run --rm -p 9876:9876 -d caarlos0/speedtest-exporter
+--docker run --rm -p 9876:9876 -d caarlos0/speedtest-exporter
+
+docker stop speedtest-exporter
+docker container rm speedtest-exporter
 
 docker run -d \
   --name=speedtest-exporter \
