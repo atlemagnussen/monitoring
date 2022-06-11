@@ -1,0 +1,1 @@
+.\windows_exporter-0.18.1-amd64.exe --collectors.enabled "[defaults],process"
